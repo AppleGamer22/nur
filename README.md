@@ -14,7 +14,7 @@
           overlays = [
             (final: prev: {
               # ...
-              ag22 = applegamer22.packages."${system}";
+              ag22 = applegamer22.packages."<your_system>";
             })
           ];
         };
