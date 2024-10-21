@@ -9,22 +9,22 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "0prdb7yhwkzsqqqc2qcaisphw2j12aqhm09bbzlfylhc24ywjc7b";
-    aarch64-linux = "1vyngyag7y4vwnmzv7gs4fg6f3k1f7f77fdlg7l0yq2hri8kxcdw";
-    x86_64-darwin = "0ky0jhqkdxk2jjpib4x5w7dkry4xlm06wm99az2b1n6b7w5cm63s";
-    aarch64-darwin = "0brqqq42y3kbafs5hj3yyl673pv2mdgyfj0djcc2vvkcxbsgkgdf";
+    x86_64-linux = "1pxrxznp0cv1gn6j2z0jglik39gqpdr9y4v1ha543jcyimdnxbfi";
+    aarch64-linux = "0kgdpgl397qpd8xg9sz4adrzmlvfkhygr1yf7c8nfcz6sh5iqpjx";
+    x86_64-darwin = "0fnw0hr41xl7167fxkvdcz6b2rcg5bwsqzaz88fvvz04kh0dzzzz";
+    aarch64-darwin = "0w2yml3sbnn344817cc1jn3zqklpc990ii434f8yz2sbhzk8fxqv";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.2/cocainate_1.1.2_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.2/cocainate_1.1.2_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.2/cocainate_1.1.2_mac_amd64.tar.gz";
-    aarch64-darwin = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.2/cocainate_1.1.2_mac_arm64.tar.gz";
+    x86_64-linux = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.3/cocainate_1.1.3_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.3/cocainate_1.1.3_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.3/cocainate_1.1.3_mac_amd64.tar.gz";
+    aarch64-darwin = "https://github.com/AppleGamer22/cocainate/releases/download/v1.1.3/cocainate_1.1.3_mac_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "cocainate";
-  version = "1.1.2";
+  version = "1.1.3";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
