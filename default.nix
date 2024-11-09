@@ -15,6 +15,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   cocainate = pkgs.callPackage ./pkgs/cocainate { };
+  stalk = pkgs.callPackage ./pkgs/stalk { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
