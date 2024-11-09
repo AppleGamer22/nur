@@ -23,8 +23,9 @@
         # or in a separate Nix file
         ({ pkgs, ... }: {
           programs.nix-ld.enable = true;
-          environment.systemPackages = with pkgs; [
-            ag22.cocainate
+          environment.systemPackages = with pkgs.ag22; [
+            cocainate
+            stalk
           ];
         })
         # ...
